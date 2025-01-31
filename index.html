@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Wiki Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Company Wiki Generator</h1>
+        <div class="search-container">
+          <input
+            type="text"
+            id="companyInput"
+            placeholder="Enter company name (e.g., Apple, Microsoft, Tesla)"
+          />
+          <button onclick="generateWiki()">Generate Wiki</button>
+        </div>
+      </header>
+
+      <div class="error" id="error"></div>
+
+      <div
+        class="wiki-sections markdown-body"
+        style="background-color: #fafafa"
+        id="wikiSections"
+      ></div>
+
+      <div class="loader" id="loader">
+        <div class="loader-inner"></div>
+      </div>
+
+      <div class="graph-buttons-container" id="graphButtonsContainer"></div>
+    </div>
+  </body>
+</html>
